@@ -11,7 +11,7 @@
 	
 	<author href="https://www.ejedigital.cl" email="soporte@ejedigital.cl">Soporte</author>
 	
-	<preference name="phonegap-version" value="3.0" />
+	<preference name="phonegap-version" value="cli-8.0.0" />
 	<preference name="orientation"      value="portrait" />
 	<preference name="target-device"    value="universal" />
 	<preference name="fullscreen"       value="true" />
