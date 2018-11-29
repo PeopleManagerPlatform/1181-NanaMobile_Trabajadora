@@ -1,0 +1,159 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+	<meta charset="utf-8"/>
+	<title class="titleTag"></title>
+	<link rel="stylesheet" type="text/css" href="../../jquery-mobile/jquery.mobile-1.2.1.min.css"/>
+	<link rel="stylesheet" type="text/css" href="../../jquery-mobile/jquery.mobile.datebox-1.0.1.min.css">
+	<link rel="stylesheet" type="text/css" href="../../jquery-mobile/jquery.mobile.simpledialog.min.css">
+	<link rel="stylesheet" type="text/css" href="../../jquery-mobile/app.css">        
+</head> 
+	<body>
+		<div data-role="page" id="quiebrestock_principal">
+			<script src="../../js/serverSQL.js"></script>
+			<script  src="../../js/ObjAnyWhereCCL_CP.js"></script>
+			<script src="js/planilla_por_sala.js"></script>
+			<div data-role="header" data-theme="e">
+				<a href="../../menu.html"  data-transition="flip" data-direction="reverse" data-icon="back" data-iconpos="notext">Atrás</a>
+				<h1 title="Ipos - Procesos - Facing - Flejeras" class="titleTag"></h1>
+				<a href="../../menu.html"  class="btn_home" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
+			</div>	
+			<div data-role="content" data-theme="c">
+				<form method="post" id="formSend" id="formSend">
+					<div data-role="fieldcontain" id="combos">
+				    </div>
+					<table>
+						<tr style="display:none;">
+							<td>
+							</td>
+						</tr>
+						<tr>
+							<td><strong>Datos Personales</strong></td>
+						</tr>
+						<tr>
+							<td>Nombre :</td>
+							<td>
+								<input type="text" id="ficha_nombre" name="ficha_nombre" size="40" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>R.U.T. :</td>
+							<td>
+								<input type="text" id="ficha_RUT" name="ficha_RUT" size=30 readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Fecha de nacimiento :</td>
+							<td>
+								<input type="text" id="ficha_fechaNacimiento" name="ficha_fechaNacimiento" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Domicilio :</td>
+							<td>
+								<input type="text" id="ficha_domicilio" name="ficha_domicilio" readonly/>
+								<input type="text" id="ficha_comuna" name="ficha_comuna" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Tel&eacute;fono fijo :</td>
+							<td>
+								<input type="text" id="ficha_telefonoFijo" name="ficha_telefonoFijo" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Tel&eacute;fono m&oacute;vil :</td>
+							<td>
+								<input type="text" id="ficha_telefonoMovil" name="ficha_telefonoMovil" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td></td>
+						</tr>
+						</br></br>
+						<tr>
+							<td><strong>Datos Contractuales</strong></td>
+						</tr>
+						<tr>
+							<td>Inicio de contrato :</td>
+							<td>
+								<input type="text" id="ficha_fechaInicio" name="ficha_fechaInicio" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Tipo de contrato :</td>
+							<td>
+								<input type="text" id="ficha_tipoContrato" name="ficha_tipoContrato" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Forma de pago :</td>
+							<td>
+								<input type="text" id="ficha_formaPago" name="ficha_formaPago" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Banco :</td>
+							<td>
+								<input type="text" id="ficha_banco" name="ficha_banco" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Cuenta bancaria :</td>
+							<td>
+								<input type="text" id="ficha_cuentaBancaria" name="ficha_cuentaBancaria" readonly/>
+							</td>
+						</tr>
+						</br></br>
+						<tr>
+							<td><strong>Datos Previsionales</strong></td>
+						</tr>
+						<tr>
+							<td>Nombre AFP :</td>
+							<td>
+								<input type="text" id="ficha_nombreAFP" name="ficha_nombreAFP" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Cotización :</td>
+							<td>
+								<input type="text" id="ficha_cotizacionAfpMoneda" name="ficha_cotizacionAfpMoneda" readonly/>
+								<input type="text" id="ficha_cotizacionAfpMonto" name="ficha_cotizacionAfpMonto" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Nombre Ins. Prev. Salud :</td>
+							<td>
+								<input type="text" id="ficha_nombreIsapre" name="ficha_nombreIsapre" readonly/>
+							</td>
+						</tr>
+						<tr>
+							<td>Cotización Salud :</td>
+							<td>
+								<input type="text" id="ficha_cotizacionIsapreMoneda" name="ficha_cotizacionIsapreMoneda" readonly/>
+								<input type="text" id="ficha_cotizacionIsapreMonto" name="ficha_cotizacionIsapreMonto" readonly/>
+							</td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			
+			<!-- 
+			<div data-role="fieldcontain" id="espaciofinal"><br><br><br><br><br></div>
+			
+			<div data-role="footer" data-position="fixed" data-theme="e">
+				<div data-role="navbar">			
+					<ul>
+						<li><a href="javascript:;test()"		 class="testSerialize" data-icon="alert" data-iconpos="notext" >Test</a></li>
+						<li><a href="javascript:;saveQuiebre();" data-icon="save" data-iconpos="notext" >Ingresar</a></li>
+					</ul>
+				</div>			
+			</div>
+			-->
+		</div>		
+    
+	</body>
+</html>
+
+

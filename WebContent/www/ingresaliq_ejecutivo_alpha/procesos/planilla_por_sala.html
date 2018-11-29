@@ -1,0 +1,73 @@
+<!DOCTYPE html> 
+<html lang="es">
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>	
+		<meta charset="utf-8"/>
+		<title class="titleTag"></title>
+		<link rel="stylesheet" type="text/css" href="../../jquery-mobile/jquery.mobile-1.2.1.min.css"/>
+        <link rel="stylesheet" type="text/css" href="../../jquery-mobile/jquery.mobile.datebox-1.0.1.min.css">
+        <link rel="stylesheet" type="text/css" href="../../jquery-mobile/jquery.mobile.simpledialog.min.css">
+		<link rel="stylesheet" type="text/css" href="../../jquery-mobile/app.css">        
+		
+	</head> 
+	<body>
+		<div data-role="page" id="quiebrestock_principal">
+			<script src="../../js/serverSQL.js"></script>
+			<script  src="../../js/ObjAnyWhereCCL_CP.js"></script>
+			<script src="js/planilla_por_sala.js"></script>
+        		
+        
+			<div data-role="header" data-theme="e">
+				<a href="../../menu.html"  data-transition="flip" data-direction="reverse" data-icon="back" data-iconpos="notext">Atrás</a>
+				<h1 title="Ipos - Procesos - Facing - Flejeras" class="titleTag"></h1>
+				<a href="../../menu.html"  class="btn_home" data-transition="flip" data-icon="home" data-iconpos="notext">Home</a>
+			</div>	
+			<div data-role="content" data-theme="c">
+				<form method="post" id="formSend" id="formSend">
+				 	    <div data-role="fieldcontain" id="combos">
+				        </div>
+						<table>
+							<tr style="display:none;">
+								<td >
+									<input type="number" id="gato_rutJefe" name="gato_rutJefe"/>
+				        			<input type="number" id="gato_rutNana" name="gato_rutNana"/>
+				        			<input type="number" id="gato_periodo" name="gato_periodo"/>
+				        			<input type="number" id="gato_periodoMes" name="gato_periodoMes"/>
+				        			<input type="number" id="gato_periodoAno" name="gato_periodoAno"/>
+								</td>
+							</tr>
+							<tr>
+								<td>Periodo a ingresar</td>
+								<td>
+									<input type="text" id="dato_periodo" name="dato_periodo" readonly/>
+								</td>
+							</tr>
+							<tr>
+								<td>Indique sueldo base</td>
+								<td>
+									<input type="number" id="gato_sueldoBase" name="gato_sueldoBase" min="0"/> 
+								</td>
+							</tr>
+							
+						</table>
+				</form>
+			</div>
+			
+			
+			<div data-role="fieldcontain" id="espaciofinal"><br><br><br><br><br></div>
+			
+			<div data-role="footer" data-position="fixed" data-theme="e">
+				<div data-role="navbar">			
+					<ul>
+						<!-- <li><a href="javascript:;test()"		 class="testSerialize" data-icon="alert" data-iconpos="notext" >Test</a></li>-->
+						<li><a href="javascript:;saveQuiebre();" data-icon="save" data-iconpos="notext" >Ingresar</a></li>
+					</ul>
+				</div>			
+			</div>
+			
+		</div>		
+    
+	</body>
+</html>
+
+
