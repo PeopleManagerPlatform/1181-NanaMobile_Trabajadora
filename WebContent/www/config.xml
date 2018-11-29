@@ -5,9 +5,9 @@
     	id = "cl.mobile.portalrrhh" 
     	version   = "2.0.0">
     	
-	<name>Portal RRHH Terpel</name>
+	<name>Portal RRHH Test</name>
 	
-	<description> Portal RRHH movil de Terpel</description>
+	<description> Portal RRHH movil de Test</description>
 	
 	<author href="https://www.ejedigital.cl" email="soporte@ejedigital.cl">Soporte</author>
 	
