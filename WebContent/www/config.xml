@@ -16,7 +16,7 @@
 	<preference name="target-device"    value="universal" />
 	<preference name="fullscreen"       value="true" />
 	<preference name="exit-on-suspend" value="true" />
-	<preference name="android-minSdkVersion" value="10" />
+	<preference name="android-minSdkVersion" value="16" />
 	
 	<icon src="icon.png" />
 	
