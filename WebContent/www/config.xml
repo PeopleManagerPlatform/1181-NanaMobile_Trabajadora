@@ -2,12 +2,12 @@
 
 <widget xmlns = "http://www.w3.org/ns/widgets" 
     	xmlns:gap = "http://phonegap.com/ns/1.0" 
-    	id = "cl.mobile.portalrrhh" 
+    	id = "cl.mobile.nanamobile_tra" 
     	version   = "2.0.0">
     	
-	<name> Test</name>
+	<name>NanaMobile_TRA</name>
 	
-	<description>  Test</description>
+	<description></description>
 	
 	<author href="https://www.ejedigital.cl" email="soporte@ejedigital.cl">Soporte</author>
 	
